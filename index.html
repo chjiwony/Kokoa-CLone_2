@@ -37,14 +37,19 @@
         </p>
     </header>
 
-    <form id="login-form">
-        <input type="text" placeholder="Email or phone number"/>
-        <input type="password" placeholder="Password"/>
+    <form action="friends.html" method="get" id="login-form"> 
+        <!--action ~으로 보내는, 
+        method POST 혹은 GET 두가지방식, POST는 백엔드 서버에 정보를 전송하는 방식
+    GET 은 보안에 취약하므로 유저네임 패스워드 등은 보내지 않는 것이 좋다-->
+        <input name="username" type="text" placeholder="Email or phone number"/>
+        <input name="password" type="password" placeholder="Password"/>
         <input type="submit" value="Log In"/>
         <!-- <input type="submit" value="Sign Up"/> -->
         <a href="#">Find Kakao Account or Password</a>
     </form>
-
+    <div id="no-mobile">
+        <span>Your screen is too big. <br>Use mobile devices.</span>
+    </div>
     
     <script 
     src = "https://kit.fontawesome.com/6478f529f2.js" cossorigin="anonymous">
