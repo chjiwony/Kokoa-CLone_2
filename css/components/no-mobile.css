@@ -1,0 +1,33 @@
+@keyframes no-mobileTextmove {
+    0% {
+        transform:scale(1);
+        color:black;
+    }
+    50% {
+        transform: scale(2);
+        color:red;
+    }
+    100% {
+        transform: scale(1);
+        color: black;
+    }
+}
+#no-mobile {
+    position: absolute;
+    z-index:99;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--yellow);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    font-size: 32px;
+    animation:no-mobileTextmove 1s ease-out infinite;
+}
+
+@media screen and (max-width: 800px) {
+    #no-mobile {
+        display:none;
+    }
+}
